@@ -1,0 +1,14 @@
+localhost ansible_connection=local
+
+server-4.scc-edu #ansible_user=ansible
+
+[front]
+server-0 ansible_host=server-0.scc-edu
+server-1.scc-edu
+
+[front:vars]
+main_service=nginx
+
+[back]
+server-2.scc-edu
+server-3.scc-edu
