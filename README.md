@@ -15,7 +15,7 @@ Importer les dépôts des travaux précédents et les mettre en place
 ```Shell
 git clone https://github.com/normandie-demo/nginx.git
 cd nginx
-ansible-playbook -i inventory nginx.yml
+ansible-playbook -i ../inventory nginx.yml
 ```
 
 ### MariaDB
