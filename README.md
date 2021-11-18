@@ -27,6 +27,7 @@ cd db
 ansible-galaxy role install -r ./roles/requirements.yml -p ./roles
 ansible-playbook -i ../inventory mariadb.yml
 ansible-playbook -i ../inventory config.yml
+ansible-playbook -i ../inventory init.yml
 ```
 ### Creation du Vault
 
