@@ -42,6 +42,12 @@ old_pass: testPASS123
 new_pass: testPASS456
 ```
 
+Jouer le code
+
+```Shell
+ansible-playbook -i ../inventory -v replace.yml --ask-vault-pass
+```
+
 ### Après mise en place Vault
 
 Toujours dans le dossier db
