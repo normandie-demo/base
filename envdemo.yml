@@ -12,7 +12,7 @@
       that:
         - var_username is defined and var_username | length > 0
         - var_password is defined and var_password | length > 0
-        - var_extravar is defined and var_extravar | int => 0
+        - var_extravar is defined and var_extravar | type_debug == "int"
   
   - name: définir des variables
     ansible.builtin.set_fact:
