@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  
+  tasks:
+  - name: mise à jour de tous les packages
+    ansible.builtin.dnf:
+      name: *
+      state: latest
+  
