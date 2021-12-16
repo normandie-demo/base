@@ -6,7 +6,14 @@
     ansible.builtin.set_fact:
       var_username: "{{ lookup('env', 'demo_username') }}"
       var_password: "{{ lookup('env', 'demo_password') }}"
-     
+    
+  - name: vérification de la présence des variables et s'il y a du contenu
+    ansible.builtin.assert:
+      that:
+        - var_username is defined and var_username | length > 0
+        - var_password is defined and var_password | length > 0
+        - var_extravar is defined and var_extravar | length > 0
+  
   - name: définir des variables
     ansible.builtin.set_fact:
       var_credential: "{{ var_username }}:{{ var_password }}"
@@ -22,3 +29,7 @@
   - name: Display Credential
     ansible.builtin.debug:
       var: var_credential
+
+  - name: Display extravar
+    ansible.builtin.debug:
+      var: var_extravar
