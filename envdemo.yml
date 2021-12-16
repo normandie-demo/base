@@ -4,8 +4,8 @@
   
   - name: définir des variables
     ansible.builtin.set_fact:
-      var_username: {{ lookup('env', 'demo_username') }}
-      var_password: {{ lookup('env', 'demo_password') }}
+      var_username: "{{ lookup('env', 'demo_username') }}"
+      var_password: "{{ lookup('env', 'demo_password') }}"
      
   - name: définir des variables
     ansible.builtin.set_fact:
